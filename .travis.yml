@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '12'
+branches:
+  only:
+  - main
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  on:
+    branch: main
+  api_key:
+    secure: HTtWhgPq11XWUwNVg91/Vx4gKvzqwMyt25J7qSACAyWA+vmGU/EOKbyJSo0/q4QDDLn+P4iyqaI/0LtY4ZtqZV/KZClnANraEcNN2KT0plrFXCAZpOnbDyVbmYQBH8TDQjRJefpd77sHM2KgJoLxonzEveQVL33CzRyxNLE244hj/gEN+FK7UGiLVZvam7TNlAVpxxcWvzkrvmch8ltwVLTnRlio9A/s7ReMVSuhOYDkZTipo0gXDT2TES8hD+D2Jti9cH2MdRLZWdlx2RANCZKOst1+UkrprqPSX4FJrejy5PXXkaHMWH1AfXM1y356h0i1JpWloDTJ2DjcPtIKoGGaQM+RmBunOIFJ4VcHRs0kbkdiv1rkfJbYtnVdb9qM3gUOg1OA/tYwPz8C9guVtW9k2EdGot6KEJ4Wrx+in2XGgj8Hv10+osZVFXhRYleEM24BJYSWOL15/OJjqFrTlirRthJDr0YvcU09viJpocSThiVcZIbpsQPDD7FIGsNSZNWbH6GujxZHIJscvYq5aEkKWUSDJ3PH3mZgOVAMwgN4NGCoQcewygv9Q7XL76+yVOoW5mLgK/2KXrrBoxFzMxYXefcQFdpOelxYSvNj7xhLSHoPd1dGnRo7MzaPlDQRq4KWKdqWJsVtdkCGvDuH0r3YloV06eX/EyOTUGHP674=
+  app: upc-tsw-ef-nest-u201314147
+notifications:
+  email:
+    on_failure: change
+    on_success: change
